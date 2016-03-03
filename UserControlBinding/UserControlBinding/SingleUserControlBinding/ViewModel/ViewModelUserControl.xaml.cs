@@ -1,4 +1,4 @@
-﻿namespace UserControlBinding.UserControl.ViewModel
+﻿namespace UserControlBinding.SingleUserControlBinding.ViewModel
 {
 	public sealed partial class ViewModelUserControl : Windows.UI.Xaml.Controls.UserControl
 	{

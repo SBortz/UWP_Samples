@@ -1,14 +1,13 @@
-﻿<Page x:Class="UserControlBinding.View.MainPage"
+﻿<Page x:Class="UserControlBinding.View.SingleUserControlBinding"
 	  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 	  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	  xmlns:local="using:UserControlBinding"
 	  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 	  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-	  xmlns:userControl="using:UserControlBinding.UserControl"
-	  xmlns:dp="using:UserControlBinding.UserControl.DP"
-	  xmlns:vIewModel="using:UserControlBinding.UserControl.ViewModel"
-	  xmlns:inheritedViewModel="using:UserControlBinding.UserControl.InheritedViewModel"
-	  mc:Ignorable="d">
+      xmlns:dp="using:UserControlBinding.SingleUserControlBinding.DP"
+      xmlns:inheritedViewModel="using:UserControlBinding.SingleUserControlBinding.InheritedViewModel"
+      xmlns:viewModel="using:UserControlBinding.SingleUserControlBinding.ViewModel"
+      mc:Ignorable="d">
 
 	<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 		<ScrollViewer VerticalScrollMode="Auto"
@@ -61,7 +60,7 @@
 						BorderThickness="2"
 						RelativePanel.RightOf="txtBlockViewModelUserControl"
 						RelativePanel.AlignTopWith="txtBlockViewModelUserControl">
-					<vIewModel:ViewModelUserControl ViewModel="{x:Bind viewModel.NewControlViewModel, Mode=OneWay}"
+					<viewModel:ViewModelUserControl ViewModel="{x:Bind viewModel.NewControlViewModel, Mode=OneWay}"
 													Width="500"
 													Height="200" />
 				</Border>
@@ -81,7 +80,7 @@
 						BorderThickness="2"
 						RelativePanel.RightOf="txtBlockDPViewModelUserControl"
 						RelativePanel.AlignTopWith="txtBlockDPViewModelUserControl">
-					<vIewModel:DPViewModelUserControl ViewModel="{x:Bind viewModel.NewControlViewModel, Mode=OneWay}"
+					<viewModel:DPViewModelUserControl ViewModel="{x:Bind viewModel.NewControlViewModel, Mode=OneWay}"
 													Width="500"
 													Height="200" />
 				</Border>
@@ -101,7 +100,7 @@
 						BorderThickness="2"
 						RelativePanel.RightOf="txtBlockDPViewModelUserControlEdited"
 						RelativePanel.AlignTopWith="txtBlockDPViewModelUserControlEdited">
-					<vIewModel:DPViewModelUserControl ViewModel="{x:Bind viewModel.EditedControlViewModel, Mode=OneWay}"
+					<viewModel:DPViewModelUserControl ViewModel="{x:Bind viewModel.ControlViewModel, Mode=OneWay}"
 													  Width="500"
 													  Height="200" />
 				</Border>

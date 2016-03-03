@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using Windows.UI.Xaml;
 
-namespace UserControlBinding.UserControl.DP
+namespace UserControlBinding.SingleUserControlBinding.DP
 {
 	public sealed partial class DPUserControl : Windows.UI.Xaml.Controls.UserControl
 	{

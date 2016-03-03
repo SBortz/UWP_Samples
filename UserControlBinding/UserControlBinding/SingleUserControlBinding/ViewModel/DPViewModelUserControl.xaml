@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="UserControlBinding.UserControl.ViewModel.DPViewModelUserControl"
+﻿<UserControl x:Class="UserControlBinding.SingleUserControlBinding.ViewModel.DPViewModelUserControl"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:UserControlBinding"
@@ -9,6 +9,9 @@
     d:DesignWidth="400">
 
     <Grid>
-		<TextBlock x:Name="txtBlockHeadline" Text="{x:Bind ViewModel.TextToShow, Mode=OneWay}"/>
+		<StackPanel Orientation="Vertical">
+			<TextBlock x:Name="txtBlockHeadline" Text="{x:Bind ViewModel.TextToShow, Mode=OneWay}"/>
+			<Button x:Name="btnCalc" Content="Calculate" Click="BtnCalc_OnClick"></Button>
+		</StackPanel>
 	</Grid>
 </UserControl>

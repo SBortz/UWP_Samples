@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="UserControlBinding.View.ListUserControlBinding"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UserControlBinding.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:dp="using:UserControlBinding.SingleUserControlBinding.DP"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+		<Grid.Resources>
+			<DataTemplate x:Key="dataTemplate1">
+				
+			</DataTemplate>
+		</Grid.Resources>
+		<ListView x:Name="listView"/>
+    </Grid>
+</Page>

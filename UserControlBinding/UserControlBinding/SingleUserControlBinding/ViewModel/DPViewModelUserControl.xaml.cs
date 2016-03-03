@@ -1,7 +1,6 @@
-﻿using System.Diagnostics;
-using Windows.UI.Xaml;
+﻿using Windows.UI.Xaml;
 
-namespace UserControlBinding.UserControl.ViewModel
+namespace UserControlBinding.SingleUserControlBinding.ViewModel
 {
 	public sealed partial class DPViewModelUserControl : Windows.UI.Xaml.Controls.UserControl
 	{
@@ -36,6 +35,11 @@ namespace UserControlBinding.UserControl.ViewModel
 		public DPViewModelUserControl()
 		{
 			this.InitializeComponent();
+		}
+
+		private async void BtnCalc_OnClick(object sender, RoutedEventArgs e)
+		{
+			await this.ViewModel.DoHeavyWorkLoadStuff();
 		}
 	}
 }

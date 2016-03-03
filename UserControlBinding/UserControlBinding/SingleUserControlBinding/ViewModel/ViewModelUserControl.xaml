@@ -1,8 +1,7 @@
-﻿<UserControl
-    x:Class="UserControlBinding.UserControl.InheritedViewModel.InheritedViewModelUserControl"
+﻿<UserControl x:Class="UserControlBinding.SingleUserControlBinding.ViewModel.ViewModelUserControl"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:UserControlBinding.UserControl.InheritedViewModel"
+    xmlns:local="using:UserControlBinding"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
@@ -10,7 +9,6 @@
     d:DesignWidth="400">
 
     <Grid>
-		<TextBlock x:Name="txtBlockHeadline"
-				   Text="{x:Bind viewModel.TextToShow, Mode=OneWay}" />
+		<TextBlock x:Name="txtBlockHeadline" Text="{x:Bind viewModel.TextToShow, Mode=OneWay}"/>
 	</Grid>
 </UserControl>

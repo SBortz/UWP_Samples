@@ -1,4 +1,5 @@
-﻿<UserControl x:Class="UserControlBinding.UserControl.ViewModel.ViewModelUserControl"
+﻿<UserControl
+    x:Class="UserControlBinding.SingleUserControlBinding.DP.DPUserControl"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:UserControlBinding"
@@ -9,6 +10,6 @@
     d:DesignWidth="400">
 
     <Grid>
-		<TextBlock x:Name="txtBlockHeadline" Text="{x:Bind viewModel.TextToShow, Mode=OneWay}"/>
+		<TextBlock x:Name="txtBlockHeadline" Text="{x:Bind Headline, Mode=OneWay}"/>
 	</Grid>
 </UserControl>

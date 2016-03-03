@@ -5,9 +5,10 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Core;
 using UserControlBinding.Annotations;
-using UserControlBinding.UserControl;
-using UserControlBinding.UserControl.ViewModel;
+using UserControlBinding.SingleUserControlBinding.ViewModel;
+
 
 namespace UserControlBinding.ViewModel
 {
@@ -24,6 +25,8 @@ namespace UserControlBinding.ViewModel
 		}
 
 		#endregion
+
+		private CoreDispatcher dispatcher;
 
 		#region DPUserControl
 		private string inputText;
@@ -47,13 +50,13 @@ namespace UserControlBinding.ViewModel
 
 		#endregion
 
-		#region Scenario 1,2,3,4 -> New ControlViewModel instance for control
+		#region Scenario 1,2,3 -> New ControlViewModel instance for control
 
 		public UserControlViewModel NewControlViewModel
 		{
 			get
 			{
-				return new UserControlViewModel()
+				return new UserControlViewModel(this.dispatcher)
 				{
 					TextToShow = this.InputText
 				};
@@ -67,16 +70,17 @@ namespace UserControlBinding.ViewModel
 
 		private UserControlViewModel viewModelUserControlViewModel;
 
-		public UserControlViewModel EditedControlViewModel
+		public UserControlViewModel ControlViewModel
 		{
 			get { return this.viewModelUserControlViewModel; }
 		}
 
 		#endregion
 
-		public MainPageViewModel()
+		public MainPageViewModel(CoreDispatcher dispatcher)
 		{
-			this.viewModelUserControlViewModel = new UserControlViewModel();
+			this.dispatcher = dispatcher;
+			this.viewModelUserControlViewModel = new UserControlViewModel(this.dispatcher);
 			this.InputText = "TestText";
 
 			

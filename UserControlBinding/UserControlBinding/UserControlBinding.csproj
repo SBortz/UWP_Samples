@@ -99,24 +99,31 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\Annotations.cs" />
-    <Compile Include="UserControl\InheritedViewModel\InheritedViewModelUserControl.xaml.cs">
+    <Compile Include="SingleUserControlBinding\InheritedViewModel\InheritedViewModelUserControl.xaml.cs">
       <DependentUpon>InheritedViewModelUserControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\ViewModel\DPViewModelUserControl.xaml.cs">
+    <Compile Include="SingleUserControlBinding\ViewModel\DPViewModelUserControl.xaml.cs">
       <DependentUpon>DPViewModelUserControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\ViewModel\ViewModelUserControl.xaml.cs">
+    <Compile Include="SingleUserControlBinding\ViewModel\ViewModelUserControl.xaml.cs">
       <DependentUpon>ViewModelUserControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\ViewModel\UserControlViewModel.cs" />
+    <Compile Include="SingleUserControlBinding\ViewModel\UserControlViewModel.cs" />
     <Compile Include="ViewModel\MainPageViewModel.cs" />
-    <Compile Include="View\MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
+    <Compile Include="View\ListUserControlBinding.xaml.cs">
+      <DependentUpon>ListUserControlBinding.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SingleUserControlBinding.xaml.cs">
+      <DependentUpon>SingleUserControlBinding.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserControl\DP\DPUserControl.xaml.cs">
+    <Compile Include="SingleUserControlBinding\DP\DPUserControl.xaml.cs">
       <DependentUpon>DPUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\StartView.xaml.cs">
+      <DependentUpon>StartView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Work\DateTimeFormatter.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -139,23 +146,31 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="UserControl\InheritedViewModel\InheritedViewModelUserControl.xaml">
+    <Page Include="SingleUserControlBinding\InheritedViewModel\InheritedViewModelUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControl\ViewModel\DPViewModelUserControl.xaml">
+    <Page Include="SingleUserControlBinding\ViewModel\DPViewModelUserControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="UserControl\ViewModel\ViewModelUserControl.xaml">
+    <Page Include="SingleUserControlBinding\ViewModel\ViewModelUserControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="View\MainPage.xaml">
+    <Page Include="View\ListUserControlBinding.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SingleUserControlBinding.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="UserControl\DP\DPUserControl.xaml">
+    <Page Include="SingleUserControlBinding\DP\DPUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\StartView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
